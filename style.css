@@ -23,7 +23,7 @@ nav a {
   height: 100vh;
   display: flex;
   justify-content: center;
-  font-family: 'Times New Roman', Times, serif;
+  font-family: 'Montserrat ', bold, sans-serif;
   text-align: center;
   align-items: center;
   flex-direction: column;
