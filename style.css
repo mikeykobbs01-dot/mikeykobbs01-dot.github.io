@@ -263,7 +263,7 @@ footer {
 
 .profile-img {
   position: absolute;
-  top: -20px;        /* moved higher */
+  top: 0px;        /* moved higher */
   right: 80px;
   width: 130px;
   height: 160px;
