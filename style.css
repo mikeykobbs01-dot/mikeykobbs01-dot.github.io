@@ -35,6 +35,11 @@ nav a {
   background-size: cover;
   background-position: center;
 }
+.hero-text {
+  font-size: 25px;
+  line-height: 1.8;
+  max-width: 800px;
+}
 
 /* Title */
 .hero-title {
