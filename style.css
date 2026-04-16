@@ -394,23 +394,23 @@ footer {
 @media (max-width: 768px) {
 
   body {
-    font-size: 18px; /* base size increase */
+    font-size: 20px; /* base size increase */
   }
 
   h1 {
-    font-size: 28px;
+    font-size: 30px;
   }
 
   .section-title {
-    font-size: 26px;
+    font-size: 28px;
   }
 
   .card {
-    font-size: 22px; /* clickable titles bigger */
+    font-size: 26px; /* clickable titles bigger */
   }
 
   .hidden-text {
-    font-size: 16px; /* paragraph text */
+    font-size: 20px; /* paragraph text */
     line-height: 1.7;
   }
 
