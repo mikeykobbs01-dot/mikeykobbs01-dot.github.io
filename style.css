@@ -417,12 +417,14 @@ footer {
   .section {
     padding: 80px 20px; /* also fix spacing on mobile */
   }
+
+  
   /* ===== PARAGRAPH BREATHING SPACE ===== */
 
 .section p {
   font-size: 17px;
   line-height: 1.9;      /* space between lines */
-  margin-bottom: 35px;   /* space between paragraphs */
+  margin-bottom: 40px;   /* space between paragraphs */
   max-width: 750px;
 }
 
@@ -436,7 +438,7 @@ footer {
 /* Headings spacing */
 .section h4 {
   font-size: 20px;
-  margin-bottom: 12px;
+  margin-bottom: 16px;
   margin-top: 25px;
 }
 
