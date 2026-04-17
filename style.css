@@ -388,11 +388,11 @@ footer {
   padding-top: 20px; /* pull Vision upward */
 }
 .vision-box {
-  margin-bottom: 60px; /* space below Vision */
+  margin-bottom: 80px; /* space below Vision */
 }
 
 .Mission-box {
-  margin-top: 20px; /* optional fine-tune */
+  margin-top: 30px; /* optional fine-tune */
 }
 
 /* ===== RESPONSIVE ===== */
