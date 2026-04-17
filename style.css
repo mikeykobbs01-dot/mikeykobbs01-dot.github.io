@@ -319,7 +319,7 @@ footer {
 /* MAKE CLICKABLE TEXT BIG & BOLD */
 .card {
   cursor: pointer;
-  font-size: 20px;
+  font-size: 26px;
   font-weight: bold;
   margin: 15px 0;
 }
@@ -327,10 +327,10 @@ footer {
 /* STYLE THE HIDDEN TEXT */
 .hidden-text {
   display: none;
-  font-size: 14px;
+  font-size: 23px;
   font-weight: normal;
   margin-top: 10px;
-  color: #555;
+  color: #0000;
 }
 /* ===== PREMIUM ABOUT LAYOUT ===== */
 .about-container {
@@ -409,7 +409,7 @@ footer {
   }
 
   .card {
-    font-size: 26px; /* clickable titles bigger */
+    font-size: 30px; /* clickable titles bigger */
   }
 
   .hidden-text {
@@ -444,19 +444,5 @@ footer {
   margin-bottom: 16px;
   margin-top: 25px;
 }
-/* ===== MOBILE: SHOW & ENLARGE TEXT ===== */
-@media (max-width: 768px) {
-
-  .hidden-text {
-    display: block !important;   /* ALWAYS visible on mobile */
-    font-size: 25px;
-    line-height: 2;
-    margin-top: 10px;
-  }
-
-  .card {
-    font-size: 26px;  /* title (like H4) bigger */
-    font-weight: 700;
-  }
 
 }
