@@ -441,4 +441,19 @@ footer {
   margin-bottom: 16px;
   margin-top: 25px;
 }
+/* ===== MOBILE: SHOW & ENLARGE TEXT ===== */
+@media (max-width: 768px) {
 
+  .hidden-text {
+    display: block !important;   /* ALWAYS visible on mobile */
+    font-size: 18px;
+    line-height: 1.8;
+    margin-top: 10px;
+  }
+
+  .card {
+    font-size: 22px;  /* title (like H4) bigger */
+    font-weight: 700;
+  }
+
+}
