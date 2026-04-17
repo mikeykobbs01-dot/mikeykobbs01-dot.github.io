@@ -327,10 +327,10 @@ footer {
 /* STYLE THE HIDDEN TEXT */
 .hidden-text {
   display: none;
-  font-size: 23px;
+  font-size: 21px;
   font-weight: normal;
   margin-top: 10px;
-  color: #0000;
+  color: #555;
 }
 /* ===== PREMIUM ABOUT LAYOUT ===== */
 .about-container {
