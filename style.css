@@ -446,13 +446,13 @@ footer {
 
   .hidden-text {
     display: block !important;   /* ALWAYS visible on mobile */
-    font-size: 18px;
-    line-height: 1.8;
+    font-size: 25px;
+    line-height: 2;
     margin-top: 10px;
   }
 
   .card {
-    font-size: 22px;  /* title (like H4) bigger */
+    font-size: 26px;  /* title (like H4) bigger */
     font-weight: 700;
   }
 
