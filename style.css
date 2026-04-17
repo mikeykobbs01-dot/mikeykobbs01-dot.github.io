@@ -258,6 +258,7 @@ footer {
 
 /* MOBILE NAV */
 @media (max-width: 768px) {
+
   .nav-links {
     position: fixed;
     top: 70px;
@@ -390,11 +391,13 @@ footer {
   .about-image img {
     max-width: 220px;
   }
+}
   /* ===== MOBILE FONT IMPROVEMENT ===== */
 @media (max-width: 768px) {
+  
 
   body {
-    font-size: 20px; /* base size increase */
+    font-size: 24px; /* base size increase */
   }
 
   h1 {
