@@ -39,11 +39,11 @@ document.addEventListener("DOMContentLoaded", function () {
 });
 
 function toggleText(id) {
-  const text = document.getElementById(id);
+  const element = document.getElementById(id);
 
-  if (text.style.display === "block") {
-    text.style.display = "none";
+  if (element.style.display === "block") {
+    element.style.display = "none";
   } else {
-    text.style.display = "block";
+    element.style.display = "block";
   }
 }
