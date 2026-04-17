@@ -381,19 +381,17 @@ footer {
   margin-top: 30px;
 }
 .about-premium {
-  padding-bottom: 40px; /* less space after About */
+  padding-bottom: 20px; /* less space after About */
 }
 
 .vision-premium {
-  padding-top: 20px; /* pull Vision upward */
+  padding-top: 40px; /* pull Vision upward */
 }
 .vision-box {
   margin-bottom: 80px; /* space below Vision */
 }
 
-.Mission-box {
-  margin-top: 30px; /* optional fine-tune */
-}
+
 
 /* ===== RESPONSIVE ===== */
 @media (max-width: 900px) {
