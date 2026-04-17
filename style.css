@@ -373,12 +373,12 @@ footer {
 
 /* SECTION SPACING (IMPORTANT) */
 .section {
-  padding: 80px 80px; /* reduce vertical space */
+  padding: 70px 70px; /* reduce vertical space */
 }
 
 /* control space BETWEEN sections */
 .section + .section {
-  margin-top: 40px;
+  margin-top: 30px;
 }
 .about-premium {
   padding-bottom: 40px; /* less space after About */
