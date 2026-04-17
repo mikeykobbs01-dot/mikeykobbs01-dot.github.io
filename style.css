@@ -409,13 +409,37 @@ footer {
   }
 
   .card {
-    font-size: 30px; /* clickable titles bigger */
-  }
+  cursor: pointer;
+  font-size: 22px;   /* clean, strong */
+  font-weight: 600;
+  margin: 25px 0;
+  padding: 25px;
+  border-bottom: 1px solid #eee;
+  transition: 0.3s;
+}
 
-  .hidden-text {
-    font-size: 25px; /* paragraph text */
-    line-height: 1.8;
-  }
+.card:hover {
+  color: #d4af37;
+}
+
+.hidden-text {
+  display: none;
+  font-size: 17px;   /* readable, premium */
+  line-height: 1.8;
+  margin-top: 15px;
+  color: #555;
+  max-width: 700px;
+}
+  .card::after {
+  content: "+";
+  float: right;
+  font-size: 20px;
+  color: #999;
+}
+
+.card.active::after {
+  content: "−";
+}
 
   .section {
     padding: 80px 20px; /* also fix spacing on mobile */
