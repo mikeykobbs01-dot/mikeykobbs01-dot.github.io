@@ -458,8 +458,8 @@ footer {
 /* Space above each new block */
 .section div {
   margin-bottom: 50px;
-  padding-bottom: 20px;
-  border-bottom: 1px solid #eee;
+  padding-bottom: 30px;
+  border-bottom: 1.5px solid #eee;
 }
 
 /* Headings spacing */
