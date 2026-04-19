@@ -1,0 +1,118 @@
+<!DOCTYPE html> 
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Contact Us</title>
+  <link rel="stylesheet" href="styles.css">
+  <!-- Font Awesome for icons -->
+  <script src="https://kit.fontawesome.com/a076d05399.js"></script>
+</head>
+
+<body>
+  
+    <header class="navbar">
+
+  <!-- LOGO -->
+  <a href="index.html" class="logo">
+    <img src="Nana hemaa.png" alt="Company Logo">
+  </a>
+  <h1>Gallery</h1>
+  </header>
+
+<!-- FILTER -->
+<div class="gallery-filter">
+  <button onclick="filterGallery('all')">All</button>
+  <button onclick="filterGallery('events')">Events</button>
+  <button onclick="filterGallery('meetings')">Meetings</button>
+  <button onclick="filterGallery('projects')">Projects</button>
+</div>
+
+<!-- GALLERY -->
+<div class="gallery">
+
+  <div class="gallery-item events">
+    <img src="images/0N3A3031.jpg">
+    <div class="overlay">Executive Event</div>
+  </div>
+
+  <div class="gallery-item meetings">
+    <img src="images/0N3A3417.jpg">
+    <div class="overlay">Business Meeting</div>
+  </div>
+
+  <div class="gallery-item projects">
+    <img src="images/0N3A3059.jpg">
+    <div class="overlay">Project Work</div>
+  </div>
+
+  <div class="gallery-item events">
+    <img src="images/0N3A3127.jpg">
+    <div class="overlay">Networking Event</div>
+  </div>
+
+
+  <div class="gallery-item events">
+    <img src="images/0N3A3458.jpg">
+    <div class="overlay">Executive Event</div>
+  </div>
+
+  <div class="gallery-item meetings">
+    <img src="images/0N3A3454.jpg">
+    <div class="overlay">Business Meeting</div>
+  </div>
+
+  <div class="gallery-item projects">
+    <img src="images/0N3A3000.jpg">
+    <div class="overlay">Project Work</div>
+  </div>
+
+  <div class="gallery-item events">
+    <img src="images/0N3A3147.jpg">
+    <div class="overlay">Networking Event</div>
+  </div>
+</div>
+
+<!-- LIGHTBOX -->
+<div id="lightbox" class="lightbox">
+  <span onclick="closeLightbox()">&times;</span>
+  <img id="lightbox-img">
+</div>
+
+<script>
+/* FILTER */
+function filterGallery(category) {
+  const items = document.querySelectorAll('.gallery-item');
+
+  items.forEach(item => {
+    if (category === 'all' || item.classList.contains(category)) {
+      item.style.display = "block";
+    } else {
+      item.style.display = "none";
+    }
+  });
+}
+
+/* LIGHTBOX */
+const images = document.querySelectorAll(".gallery-item img");
+const lightbox = document.getElementById("lightbox");
+const lightboxImg = document.getElementById("lightbox-img");
+
+images.forEach(img => {
+  img.addEventListener("click", () => {
+    lightbox.style.display = "flex";
+    lightboxImg.src = img.src;
+  });
+});
+
+function closeLightbox() {
+  lightbox.style.display = "none";
+}
+</script>
+
+</body>
+</html>
+  
+
+
+
