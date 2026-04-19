@@ -80,3 +80,10 @@ button {
 .social-icons a:hover {
   color: #007BFF;
 }
+
+footer {
+  background: #353535;
+  color: #d4af37;
+  text-align: center;
+  padding: 20px;
+}
