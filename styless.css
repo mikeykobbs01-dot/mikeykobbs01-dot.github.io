@@ -45,3 +45,16 @@ button {
 .social-icons a:hover {
   color: #007BFF;
 }
+
+/* LOGO */
+.logo img {
+  width: 140px;
+  transition: all 0.4s ease;
+}
+
+/* LOGO ANIMATION */
+.logo img:hover {
+  transform: scale(1.08);
+  filter: brightness(1.3);
+
+}
