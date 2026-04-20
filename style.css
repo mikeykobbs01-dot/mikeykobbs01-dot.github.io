@@ -483,6 +483,7 @@ footer {
   margin-bottom: 16px;
   margin-top: 25px;
 }
+  
 a {
   color: #0b1f3a;
   text-decoration: underline;
@@ -490,5 +491,28 @@ a {
 
 a:hover {
   color: #d4af37;
+}
+
+
+.social-icons {
+  margin-top: 20px;
+}
+
+.social-icons a {
+  text-decoration: none;
+  color: white;
+  background: #000;
+  margin-right: 10px;
+  font-size: 20px;
+  padding: 12px;
+  border-radius: 50%;
+  display: inline-block;
+  transition: 0.3s ease;
+}
+
+.social-icons a:hover {
+  background: gold;
+  color: black;
+  transform: scale(1.1);
 }
 }
