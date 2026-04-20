@@ -47,3 +47,32 @@ function toggleText(id) {
     element.style.display = "block";
   }
 }
+
+document.getElementById("contact-form").addEventListener("submit", async function (e) {
+  e.preventDefault();
+
+  const name = document.getElementById("name").value;
+  const email = document.getElementById("email").value;
+  const message = document.getElementById("message").value;
+
+  try {
+    const response = await fetch("https://email-backend-7600.onrender.com/send", {
+      method: "POST",
+      headers: {
+        "Content-Type": "application/json",
+      },
+      body: JSON.stringify({ name, email, message }),
+    });
+
+    const data = await response.json();
+
+    if (response.ok) {
+      alert("Message sent successfully!");
+    } else {
+      alert("Failed to send message: " + data.error);
+    }
+  } catch (error) {
+    console.error(error);
+    alert("Something went wrong!");
+  }
+});
