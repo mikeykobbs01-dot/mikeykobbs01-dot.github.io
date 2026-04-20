@@ -71,14 +71,26 @@ button {
   width: 40%;
 }
 
+.social-icons {
+  margin-top: 20px;
+}
+
 .social-icons a {
-  margin: 10px;
+  text-decoration: none;
+  color: white;
+  background: #000;
+  margin-right: 10px;
   font-size: 20px;
-  color: #333;
+  padding: 12px;
+  border-radius: 50%;
+  display: inline-block;
+  transition: 0.3s ease;
 }
 
 .social-icons a:hover {
-  color: #007BFF;
+  background: gold;
+  color: black;
+  transform: scale(1.1);
 }
 
 footer {
