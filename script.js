@@ -31,3 +31,15 @@ document.getElementById("contact-form").addEventListener("submit", async functio
     alert("❌ Network error.");
   }
 });
+
+fetch("https://email-backend-7600.onrender.com/send-email", {
+  method: "POST",
+  headers: {
+    "Content-Type": "application/json"
+  },
+  body: JSON.stringify({
+    name: "Michael",
+    email: "test@gmail.com",
+    message: "Hello!"
+  })
+})
