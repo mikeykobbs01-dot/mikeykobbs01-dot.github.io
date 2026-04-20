@@ -76,3 +76,36 @@ document.getElementById("contact-form").addEventListener("submit", async functio
     alert("Something went wrong!");
   }
 });
+
+document.getElementById("contact-form").addEventListener("submit", async function (e) {
+  e.preventDefault();
+
+  const name = document.getElementById("name").value;
+  const email = document.getElementById("email").value;
+  const message = document.getElementById("message").value;
+
+  try {
+    const response = await fetch("https://email-backend-7600.onrender.com/send-email", {
+      method: "POST",
+      headers: {
+        "Content-Type": "application/json",
+      },
+      body: JSON.stringify({
+        to: "info@nanabenewaa.com",   // 👈 where YOU receive messages
+        subject: "New Contact Form Message",
+        message: `Name: ${name}\nEmail: ${email}\nMessage: ${message}`
+      }),
+    });
+
+    const data = await response.json();
+
+    if (response.ok) {
+      alert("Message sent successfully!");
+    } else {
+      alert("Error: " + data.error);
+    }
+  } catch (error) {
+    console.error(error);
+    alert("Something went wrong.");
+  }
+});
