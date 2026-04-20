@@ -81,9 +81,9 @@ footer {
 }
 
 .social-icons a {
-  width: 55px;              /* bigger */
+  width: 55px;
   height: 55px;
-  font-size: 22px;          /* bigger icon */
+  font-size: 22px;
   color: gold;
   background: black;
   border: 2px solid gold;
@@ -93,7 +93,6 @@ footer {
   border-radius: 50%;
   text-decoration: none;
   transition: all 0.3s ease;
-  box-shadow: 0 0 10px rgba(255, 215, 0, 0.2);
 }
 
 .social-icons a:hover {
@@ -101,4 +100,12 @@ footer {
   color: black;
   transform: scale(1.15);
   box-shadow: 0 0 15px gold;
+}
+
+.contact-container {
+  display: flex;
+  justify-content: center;
+  align-items: flex-start;
+  gap: 50px;
+  flex-wrap: wrap; /* makes it responsive */
 }
