@@ -79,3 +79,31 @@ footer {
   text-align: center;
   padding: 20px;
 }
+.social-icons {
+  margin-top: 20px;
+}
+
+.social-icons a {
+  text-decoration: none;
+  color: white;
+  background: #000;
+  margin-right: 10px;
+  font-size: 20px;
+  padding: 12px;
+  border-radius: 50%;
+  display: inline-block;
+  transition: 0.3s ease;
+}
+
+.social-icons a:hover {
+  background: gold;
+  color: black;
+  transform: scale(1.1);
+}
+
+  .social-icons {
+  display: flex;
+  flex-direction: column;   /* THIS makes it vertical */
+  gap: 15px;                /* space between icons */
+  margin-top: 20px;
+}
