@@ -515,4 +515,32 @@ a:hover {
   color: black;
   transform: scale(1.1);
 }
+
+  .social-icons {
+  display: flex;
+  flex-direction: column;   /* THIS makes it vertical */
+  gap: 15px;                /* space between icons */
+  margin-top: 20px;
+}
+
+.social-icons a {
+  color: gold;
+  background: black;
+  border: 1px solid gold;
+  width: 45px;
+  height: 45px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border-radius: 50%;
+  text-decoration: none;
+  font-size: 18px;
+  transition: 0.3s ease;
+}
+
+.social-icons a:hover {
+  background: gold;
+  color: black;
+  transform: scale(1.1);
+}
 }
