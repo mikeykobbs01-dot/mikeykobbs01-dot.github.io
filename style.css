@@ -324,14 +324,6 @@ footer {
   margin: 15px 0;
 }
 
-/* STYLE THE HIDDEN TEXT */
-.hidden-text {
-  display: none;
-  font-size: 21px;
-  font-weight: normal;
-  margin-top: 10px;
-  color: #555;
-}
 /* ===== PREMIUM ABOUT LAYOUT ===== */
 .about-container {
   display: grid;
@@ -437,14 +429,6 @@ footer {
   color: #d4af37;
 }
 
-.hidden-text {
-  display: none;
-  font-size: 17px;   /* readable, premium */
-  line-height: 1.8;
-  margin-top: 15px;
-  color: #555;
-  max-width: 700px;
-}
   .card::after {
   content: "+";
   float: right;
