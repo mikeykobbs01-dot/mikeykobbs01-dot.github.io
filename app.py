@@ -4,11 +4,16 @@ import os
 import requests
 
 app = Flask(__name__)
-CORS(app)
+
+CORS(app, resources={
+    r"/send-email": {
+        "origins": "*"
+    }
+})
 
 MAILJET_API_KEY = os.getenv("MAILJET_API_KEY")
 MAILJET_SECRET_KEY = os.getenv("MAILJET_SECRET_KEY")
-SENDER_EMAIL = os.getenv("SENDER_EMAIL")  # must be verified in Mailjet
+SENDER_EMAIL = os.getenv("SENDER_EMAIL")
 
 @app.route("/")
 def home():
@@ -42,12 +47,7 @@ def send_email():
                         }
                     ],
                     "Subject": f"New message from {name}",
-                    "TextPart": f"""
-Name: {name}
-Email: {email}
-Message:
-{message}
-"""
+                    "TextPart": f"Name: {name}\nEmail: {email}\nMessage:\n{message}"
                 }
             ]
         }
@@ -58,21 +58,20 @@ Message:
             json=payload
         )
 
-        if response.status_code == 200:
-            print("✅ Email sent via Mailjet")
+        if response.status_code in [200, 201]:
             return jsonify({"success": True, "message": "Email sent"})
         else:
-            print("❌ Mailjet Error:", response.text)
             return jsonify({"error": response.text}), 500
 
     except Exception as e:
-        print("❌ ERROR:", str(e))
         return jsonify({"error": str(e)}), 500
 
 
 if __name__ == "__main__":
-    app.run(host="0.0.0.0", port=10000)
-
-if __name__ == "__main__":
     port = int(os.environ.get("PORT", 10000))
     app.run(host="0.0.0.0", port=port)
+
+
+
+
+
