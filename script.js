@@ -1,34 +1,17 @@
-const form = document.getElementById("contact-form");
+const express = require("express");
+const app = express();
 
-if (form) {
-  form.addEventListener("submit", async function (e) {
-    e.preventDefault();
+app.use(express.urlencoded({ extended: true }));
+app.use(express.json());
 
-    const name = document.getElementById("name").value;
-    const email = document.getElementById("email").value;
-    const message = document.getElementById("message").value;
+app.post("/send", (req, res) => {
+  const { name, email, message } = req.body;
 
-    try {
-      const response = await fetch("https://mikeykobbs-backend.onrender.com/send-email", {
-        method: "POST",
-        headers: {
-          "Content-Type": "application/json",
-        },
-        body: JSON.stringify({ name, email, message }),
-      });
+  console.log("New message:");
+  console.log(name, email, message);
 
-      const data = await response.json();
+  res.send("Message received!");
+});
 
-      if (response.ok) {
-        alert("✅ Message sent successfully!");
-      } else {
-        alert("❌ Error: " + data.error);
-      }
-
-    } catch (error) {
-      console.error(error);
-      alert("❌ Network error.");
-    }
-  });
-}
-
+const PORT = process.env.PORT || 3000;
+app.listen(PORT, () => console.log(`Server running on port ${PORT}`));
