@@ -9,7 +9,7 @@ if (form) {
     const message = document.getElementById("message").value;
 
     try {
-      const response = await fetch("https://email-backend-7600.onrender.com/send-email", {
+      fetch("https://mikeykobbs-backend.onrender.com/send-email", {
         method: "POST",
         headers: {
           "Content-Type": "application/json",
