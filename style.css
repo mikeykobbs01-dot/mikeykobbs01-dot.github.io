@@ -180,4 +180,191 @@ footer {
   .hero h1 {
     font-size: 24px;
   }
+
+  /* ===== ABOUT PAGE IMAGE ===== */
+
+.section {
+  position: relative;
+}
+
+.profile-img {
+  position: absolute;
+  top: 0px;        /* moved higher */
+  right:80px;
+  width: 130px;
+  height: 160px;
+  object-fit: cover;
+  border-radius: 8px;
+  border: 3px solid #807f7f;
+  box-shadow: 0 8px 25px rgba(0,0,0,0.3);
+}
+.section {
+  color: black;
+  padding: 80px 250px 80px 50px; /* extra right space */
+}
+.hidden-text {
+  display: none;
+  margin-top: 10px;
+}
+/* MAKE CLICKABLE TEXT BIG & BOLD */
+.card {
+  cursor: pointer;
+  font-size: 26px;
+  font-weight: bold;
+  margin: 15px 0;
+}
+
+/* ===== PREMIUM ABOUT LAYOUT ===== */
+.about-container {
+  display: grid;
+  grid-template-columns: 1.2fr 0.8fr;
+  gap: 80px;
+  align-items: center;
+}
+
+.about-text p {
+  font-size: 16px;
+  line-height: 1.7;
+  margin-bottom: 20px;
+  color: #444;
+  max-width: 600px;
+}
+
+/* IMAGE FIX */
+.about-image img {
+  width: 100%;
+  max-width: 280px;
+  border-radius: 10px;
+  box-shadow: 0 20px 40px rgba(0,0,0,0.15);
+}
+
+/* ===== VISION BOX (HIGHLIGHT) ===== */
+.vision-box {
+  background: #f8f9fb;
+  padding: 50px;
+  border-left: 4px solid #d4af37;
+  max-width: 800px;
+}
+
+/* TITLES */
+.section-title {
+  font-size: 34px;
+  margin-bottom: 25px;
+  color: #0b1f3a;
+}
+
+/* SECTION SPACING (IMPORTANT) */
+.section {
+  padding: 70px 70px; /* reduce vertical space */
+}
+
+/* control space BETWEEN sections */
+.section + .section {
+  margin-top: 30px;
+}
+.about-premium {
+  padding-bottom: 20px; /* less space after About */
+}
+
+.vision-premium {
+  padding-top: 40px; /* pull Vision upward */
+}
+.vision-box {
+  margin-bottom: 80px; /* space below Vision */
+}
+
+
+
+/* ===== RESPONSIVE ===== */
+@media (max-width: 900px) {
+  .about-container {
+    grid-template-columns: 1fr;
+  }
+
+  .about-image {
+    text-align: center;
+  }
+
+  .about-image img {
+    max-width: 220px;
+  }
+}
+  /* ===== MOBILE FONT IMPROVEMENT ===== */
+@media (max-width: 768px) {
+  
+
+  body {
+    font-size: 24px; /* base size increase */
+  }
+
+  h1 {
+    font-size: 30px;
+  }
+
+  .section-title {
+    font-size: 28px;
+  }
+
+  .card {
+  cursor: pointer;
+  font-size: 22px;   /* clean, strong */
+  font-weight: 600;
+  margin: 25px 0;
+  padding: 25px;
+  border-bottom: 1px solid #eee;
+  transition: 0.3s;
+}
+
+.card:hover {
+  color: #d4af37;
+}
+
+  .card::after {
+  content: "+";
+  float: right;
+  font-size: 20px;
+  color: #999;
+}
+
+.card.active::after {
+  content: "−";
+}
+
+  .section {
+    padding: 80px 20px; /* also fix spacing on mobile */
+  }
+
+  
+  /* ===== PARAGRAPH BREATHING SPACE ===== */
+
+.section p {
+  font-size: 17px;
+  line-height: 1.9;      /* space between lines */
+  margin-bottom: 40px;   /* space between paragraphs */
+  max-width: 750px;
+}
+
+/* Space above each new block */
+.section div {
+  margin-bottom: 50px;
+  padding-bottom: 30px;
+  border-bottom: 1.5px solid #eee;
+}
+
+/* Headings spacing */
+.section h4 {
+  font-size: 20px;
+  margin-bottom: 16px;
+  margin-top: 25px;
+}
+  
+a {
+  color: #0b1f3a;
+  text-decoration: underline;
+}
+
+a:hover {
+  color: #d4af37;
+}
+  
 }
