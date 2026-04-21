@@ -43,3 +43,13 @@ fetch("https://email-backend-7600.onrender.com/send-email", {
     message: "Hello!"
   })
 })
+
+function toggleText(id) {
+  const element = document.getElementById(id);
+  const card = element.parentElement;
+
+  element.style.display =
+    element.style.display === "block" ? "none" : "block";
+
+  card.classList.toggle("active");
+}
