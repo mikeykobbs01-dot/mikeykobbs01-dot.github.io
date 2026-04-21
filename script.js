@@ -1,48 +1,36 @@
-document.getElementById("contact-form").addEventListener("submit", async function (e) {
-  e.preventDefault();
+const form = document.getElementById("contact-form");
 
-  const name = document.getElementById("name").value;
-  const email = document.getElementById("email").value;
-  const message = document.getElementById("message").value;
+if (form) {
+  form.addEventListener("submit", async function (e) {
+    e.preventDefault();
 
-  try {
-    const response = await fetch("https://email-backend-7600.onrender.com/send-email", {
-      method: "POST",
-      headers: {
-        "Content-Type": "application/json",
-      },
-      body: JSON.stringify({
-        name: name,
-        email: email,
-        message: message
-      }),
-    });
+    const name = document.getElementById("name").value;
+    const email = document.getElementById("email").value;
+    const message = document.getElementById("message").value;
 
-    const data = await response.json();
+    try {
+      const response = await fetch("https://email-backend-7600.onrender.com/send-email", {
+        method: "POST",
+        headers: {
+          "Content-Type": "application/json",
+        },
+        body: JSON.stringify({ name, email, message }),
+      });
 
-    if (response.ok) {
-      alert("✅ Message sent successfully!");
-    } else {
-      alert("❌ Error: " + data.error);
+      const data = await response.json();
+
+      if (response.ok) {
+        alert("✅ Message sent successfully!");
+      } else {
+        alert("❌ Error: " + data.error);
+      }
+
+    } catch (error) {
+      console.error(error);
+      alert("❌ Network error.");
     }
-
-  } catch (error) {
-    console.error(error);
-    alert("❌ Network error.");
-  }
-});
-
-fetch("https://email-backend-7600.onrender.com/send-email", {
-  method: "POST",
-  headers: {
-    "Content-Type": "application/json"
-  },
-  body: JSON.stringify({
-    name: "Michael",
-    email: "test@gmail.com",
-    message: "Hello!"
-  })
-})
+  });
+}
 
 function toggleText(id) {
   const element = document.getElementById(id);
@@ -50,11 +38,4 @@ function toggleText(id) {
 
   element.classList.toggle("show");
   card.classList.toggle("active");
-}
-
-console.log("JS is alive 🔥");
-
-function toggleText(id) {
-  const element = document.getElementById(id);
-  element.classList.toggle("show");
 }
