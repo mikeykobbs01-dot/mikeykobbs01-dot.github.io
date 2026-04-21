@@ -32,10 +32,4 @@ if (form) {
   });
 }
 
-function toggleText(id) {
-  const element = document.getElementById(id);
-  const card = element.parentElement;
 
-  element.classList.toggle("show");
-  card.classList.toggle("active");
-}
