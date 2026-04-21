@@ -53,3 +53,5 @@ function toggleText(id) {
 
   card.classList.toggle("active");
 }
+
+console.log("JS is alive 🔥");
