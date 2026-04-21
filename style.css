@@ -493,6 +493,12 @@ a:hover {
   color: #d4af37;
 }
 
+.hidden-text {
+  display: none;
+}
 
+.hidden-text.show {
+  display: block;
+}
 
 }
