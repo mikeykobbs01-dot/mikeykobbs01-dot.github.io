@@ -53,3 +53,8 @@ function toggleText(id) {
 }
 
 console.log("JS is alive 🔥");
+
+function toggleText(id) {
+  const element = document.getElementById(id);
+  element.classList.toggle("show");
+}
