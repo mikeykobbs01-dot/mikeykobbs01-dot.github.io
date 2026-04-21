@@ -9,7 +9,7 @@ if (form) {
     const message = document.getElementById("message").value;
 
     try {
-      fetch("https://mikeykobbs-backend.onrender.com/send-email", {
+      const response = await fetch("https://mikeykobbs-backend.onrender.com/send-email", {
         method: "POST",
         headers: {
           "Content-Type": "application/json",
@@ -31,5 +31,4 @@ if (form) {
     }
   });
 }
-
 
